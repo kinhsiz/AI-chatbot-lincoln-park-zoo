@@ -3,7 +3,7 @@ import OpenAI from "openai"
 
 
 export async function POST(req) {
-    const openai = new OpenAI('org-w2sb8ugXkQJQbAzsiFHoYv3G')
+    const openai = new OpenAI()
     const data = await req.json()
 
     const completion = await openai.chat.completions.create({
@@ -14,10 +14,10 @@ export async function POST(req) {
         model: "gpt-4o-mini",
       });
     
-      console.log(completion.choices[0]);
-    
-    
-    return NextResponse.json({message: 'hellow from the server'})
+    return NextResponse.json(
+      {message: completion.choices[0].message.content},
+      {status: 200}
+    )
 }
 
 
