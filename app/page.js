@@ -88,7 +88,8 @@ export default function Home() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      fontFamily= 'Monospace'
+      fontFamily= '"Roboto", "Helvetica", "Arial", sans-serif'
+      
     >
       
       <Stack
@@ -99,6 +100,7 @@ export default function Home() {
         border="1px solid black"
         spacing={3}
         overflow={'hidden'}
+        backgroundColor= "#eeeeee" 
       > 
         
         <Stack
@@ -118,7 +120,7 @@ export default function Home() {
             fontWeight= "500"
             
             
-            >Lincoln Park Chatbot</Typography>
+            >Lincoln Park Zoo Chatbot</Typography>
       </Stack>
         <Stack
           direction={'column'}
@@ -146,7 +148,7 @@ export default function Home() {
                     : '#f8cd23'
                 }
                 color="black"
-                fontWeight='bold' 
+                fontWeight='500' 
                 borderRadius={11}
                 p={3}
               >
@@ -158,7 +160,7 @@ export default function Home() {
           <div ref={messagesEndRef} />
 
         </Stack>
-        <Stack direction={'row'} spacing={2} p={2}>
+        <Stack direction={'row'} spacing={2} p={2} backgroundColor='white'>
 
           <TextField
             label="Type your message here"
